@@ -244,7 +244,7 @@ const john = {
 
 console.log (`${mark.calcBMI() > john.calcBMI() ? `${mark.fullName}'s BMI {${mark.BMI}} is higher than ${john.fullName}'s {${john.BMI}}` : `${john.fullName}'s BMI {${john.BMI}} is higher than ${mark.fullName}'s {${mark.BMI}}`}`) */
 
-const dwayne = [
+/* const dwayne = [
     'Programmer',
     'Bob Sledding',
     2027-1999,
@@ -263,4 +263,29 @@ for (let i = 0; i < dwayne.length; i++){
 for (let i = 0; i < dwayne.length; i++){
     if (typeof dwayne[i] === 'number') break;
     console.log(dwayne[i], typeof dwayne[i])
+} */
+
+//Coding challenge 4
+const bills = [22, 295, 176, 440, 37, 105, 10, 110, 86, 52];
+const tips = [];
+const totals = [];
+
+function calcTip(bill) {
+    return bill >=50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
+
+for (let i=0; i < bills.length; i++) {
+    tips[i] = calcTip(bills[i]);
+    totals[i] = bills[i] + tips[i]
+}
+
+console.log(bills, tips, totals);
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i =0; i < arr.length; i++){
+        sum = sum + arr[i];
+    }
+    return sum;
+}
+console.log(calcAverage(totals));
