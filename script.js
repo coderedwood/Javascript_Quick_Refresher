@@ -165,6 +165,27 @@ const koalasAvg1 = calcAverage(23,34,27);
 const dolphinsAvg1 = calcAverage(85,54,41);
 checkWinner(koalasAvg1,dolphinsAvg1); */
 
-const friend1 = 'Michael';
-const friend2 = 'Steven';
-const friend3 = 'Peter';
+// Coding challenge for arrays
+
+// if (bill >=50 && bill <=300)
+// {
+//     tip = bill * 0.15;
+// }else {
+//     tip = bill * 0.2;
+// }
+
+// const tip = (bill >=50 && bill <=300) ? bill * 0.15 : bill *0.2;
+
+// const tip = (bill) => { (bill >=50 && bill <= 300) ? bill * 0.15 : bill * 0.2};
+
+function calcTip(bill) {
+    return bill >=50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+const billArray =  [125 , 555, 44];
+
+const tipArray = [calcTip(billArray[0]), calcTip(billArray[1]), calcTip(billArray[2])];
+const totalArray = [billArray[0] +tipArray[0],billArray[1] +tipArray[1],billArray[2] +tipArray[2]]
+
+console.log(`${billArray},
+${tipArray},
+${totalArray}`);
