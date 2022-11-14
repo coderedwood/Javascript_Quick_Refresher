@@ -213,7 +213,7 @@ const jonas = {
     },
     hasDriversLicense: true,
     getSummary: function() {
-        this.summary = `${this.firstName} is a ${this.age}-year old ${this.job}, ${this.hasDriversLicense ? `and has a driver's license.`:`and has no driver's license.`}`;
+        this.summary = `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? `a`:`no` } driver's license.`;
         return this.summary;
     }
 }
