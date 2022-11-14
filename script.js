@@ -286,6 +286,6 @@ const calcAverage = function (arr) {
     for (let i =0; i < arr.length; i++){
         sum = sum + arr[i];
     }
-    return sum;
+    return sum/arr.length;
 }
 console.log(calcAverage(totals));
