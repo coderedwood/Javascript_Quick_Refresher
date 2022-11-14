@@ -190,7 +190,7 @@ console.log(`${billArray},
 ${tipArray},
 ${totalArray}`); */
 
-const jonas = {
+/* const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtman',
     age: 2037 -1991,
@@ -198,4 +198,24 @@ const jonas = {
     friends: ['Michael', 'Peter', 'Steven']
 }
 
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}!`)
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}!`);
+console['log'](`Testing`); */
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtman',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+    hasDriversLicense: true,
+    getSummary: function() {
+        this.summary = `${this.firstName} is a ${this.age}-year old ${this.job}, ${this.hasDriversLicense ? `and has a driver's license.`:`and has no driver's license.`}`;
+        return this.summary;
+    }
+}
+console.log(jonas.calcAge());
+console.log(jonas.getSummary());
