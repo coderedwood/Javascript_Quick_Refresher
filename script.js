@@ -222,7 +222,7 @@ console.log(jonas.getSummary()); */
 
 //Coding challenge 3
 
-const mark = {
+/* const mark = {
     fullName: 'Mark Miller',
     mass: 78,
     height: 1.69,
@@ -242,4 +242,25 @@ const john = {
     }
 }
 
-console.log (`${mark.calcBMI() > john.calcBMI() ? `${mark.fullName}'s BMI {${mark.BMI}} is higher than ${john.fullName}'s {${john.BMI}}` : `${john.fullName}'s BMI {${john.BMI}} is higher than ${mark.fullName}'s {${mark.BMI}}`}`)
+console.log (`${mark.calcBMI() > john.calcBMI() ? `${mark.fullName}'s BMI {${mark.BMI}} is higher than ${john.fullName}'s {${john.BMI}}` : `${john.fullName}'s BMI {${john.BMI}} is higher than ${mark.fullName}'s {${mark.BMI}}`}`) */
+
+const dwayne = [
+    'Programmer',
+    'Bob Sledding',
+    2027-1999,
+    'Linkin Park',
+    ['Dogs', 'Cats', 'Turtles'],
+    false
+];
+
+//use of continue keyword to control the loop
+for (let i = 0; i < dwayne.length; i++){
+    if (typeof dwayne[i] !== 'string') continue;
+    console.log(dwayne[i], typeof dwayne[i])
+}
+
+//use of break keyword to terminate the loop
+for (let i = 0; i < dwayne.length; i++){
+    if (typeof dwayne[i] === 'number') break;
+    console.log(dwayne[i], typeof dwayne[i])
+}
