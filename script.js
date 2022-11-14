@@ -178,7 +178,7 @@ checkWinner(koalasAvg1,dolphinsAvg1); */
 
 // const tip = (bill) => { (bill >=50 && bill <= 300) ? bill * 0.15 : bill * 0.2};
 
-function calcTip(bill) {
+/* function calcTip(bill) {
     return bill >=50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
 const billArray =  [125 , 555, 44];
@@ -188,4 +188,14 @@ const totalArray = [billArray[0] +tipArray[0],billArray[1] +tipArray[1],billArra
 
 console.log(`${billArray},
 ${tipArray},
-${totalArray}`);
+${totalArray}`); */
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtman',
+    age: 2037 -1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+}
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}!`)
