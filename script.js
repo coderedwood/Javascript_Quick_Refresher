@@ -201,7 +201,7 @@ ${totalArray}`); */
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}!`);
 console['log'](`Testing`); */
 
-const jonas = {
+/* const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtman',
     birthYear: 1991,
@@ -218,4 +218,28 @@ const jonas = {
     }
 }
 console.log(jonas.calcAge());
-console.log(jonas.getSummary());
+console.log(jonas.getSummary()); */
+
+//Coding challenge 3
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height ** 2);
+        return this.BMI
+    }
+}
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height ** 2);
+        return this.BMI
+    }
+}
+
+console.log (`${mark.calcBMI() > john.calcBMI() ? `${mark.fullName}'s BMI {${mark.BMI}} is higher than ${john.fullName}'s {${john.BMI}}` : `${john.fullName}'s BMI {${john.BMI}} is higher than ${mark.fullName}'s {${mark.BMI}}`}`)
