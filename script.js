@@ -266,7 +266,7 @@ for (let i = 0; i < dwayne.length; i++){
 } */
 
 //Coding challenge 4
-const bills = [22, 295, 176, 440, 37, 105, 10, 110, 86, 52];
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [];
 const totals = [];
 
@@ -284,8 +284,8 @@ console.log(bills, tips, totals);
 const calcAverage = function (arr) {
     let sum = 0;
     for (let i =0; i < arr.length; i++){
-        sum = sum + arr[i];
+        sum += arr[i];
     }
-    return sum/arr.length;
+    return sum / arr.length;
 }
 console.log(calcAverage(totals));
