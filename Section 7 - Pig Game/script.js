@@ -21,6 +21,15 @@ const scores = [0,0];
 let currentScore =0;
 let activePlayer =0;
 
+//Switch player function (DRYS Do not repeat yourself principle)
+const switchPlayer = function() {
+    currentScore = 0;
+    document.getElementById(`current--${activePlayer}`).textContent = currentScore;
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    player0El.classList.toggle('player--active');
+    player1El.classList.toggle('player--active');
+};
+
 //Rolling dice functionality
 btnRoll.addEventListener('click', function(){
     //1. Generate random dice roll
@@ -38,10 +47,23 @@ btnRoll.addEventListener('click', function(){
         document.getElementById(`current--${activePlayer}`).textContent = currentScore;
     } else {
         //Switch to next player
-        currentScore = 0;
-        document.getElementById(`current--${activePlayer}`).textContent = currentScore;
-        activePlayer = activePlayer === 0 ? 1 : 0;
-        player0El.classList.toggle('player--active');
-        player1El.classList.toggle('player--active');
+        switchPlayer();
+    }
+});
+
+//Hold score functionality
+btnHold.addEventListener('click', function(){
+    //Adds score to active player score
+    scores[activePlayer] += currentScore;
+    document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
+
+    //Check if score >= 100
+    if (scores[activePlayer] >= 20) {
+        //finish the game
+        document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
+        document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+    } else{
+        //Switch player
+        switchPlayer();
     }
 });
